@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+// setting
+@forward './setting/reset';
+@forward './setting/vars';
+@forward './setting/mixin';
+
+// common
+
+html{ 
+    font-size:62.5%; 
+    // font-synthesis: none;
+    // text-rendering: optimizeLegibility;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+    // -webkit-text-size-adjust: 100%;
+}
+
+body{ 
+    font: 400 1.6rem / 1 var(--main-font ), sans-serif;
+    letter-spacing:-.035em;
+    overflow-x: hidden;
+}
+
+.inner{
+    position: relative;
+    width: 100%;
+    max-width: var(--max-width);
+    margin:0 auto;
+}
+
+img{ 
+    max-width:100%;
+    height: auto; 
+}
+
+.scroll-disable{ 
+    overflow: hidden;
+}
+
+#wrap{
+    background: var(--white);
+}
+
+#wrap.index #header ul li:nth-child(1) a,
+#wrap.about #header ul li:nth-child(2) a,
+#wrap.work #header ul li:nth-child(3) a,
+#wrap.contact #header ul li:nth-child(4) a{
+    border-radius: 5rem;
+    background: var(--white);
+    font-weight: 800;
+    color: var(--blue);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue); /* 스크롤바 막대 색상 */
+    //border: 2px solid #9b6a2f; /* 스크롤바 막대 테두리 설정  */
+    border-radius: 12px 12px 12px 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0);  /*스크롤바 뒷 배경 색상*/
+}
+
+/***** media *****/
+@media (max-width:1920px){
+    html{
+        font-size: 0.5208vw;
+    }
+}
+
+@media (max-width:1480px){
+    html{
+        font-size: 0.6757vw;
+    }
+}
+
+@media (max-width:1023px){
+    html{
+        font-size: 0.9775vw;
+    }
+}
+
+// @media (max-width:767px){
+//     html{
+//         font-size: 1.3038vw;
+//     }
+// }
+
+@media (max-width:860px){
+    html{
+        font-size:1.3372vw;
+    }
+}
+
+@media (max-width:540px){
+    html{
+        font-size: 1.8519vw;
+    }
+}
+
+@media (max-height: 520px) and (min-width: 560px) and (pointer: coarse){
+    html{
+        font-size: 0.7571vw;
+    }
+}
+
+// ::-webkit-scrollbar {
+//   display: none;
+// }

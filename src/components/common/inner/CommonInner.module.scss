@@ -1,0 +1,30 @@
+
+.curveLoader{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+
+    svg, .background{
+        width: 100vw;
+        height: calc(100vh + 100vh);
+        position: absolute;
+        transform: translateY(-30rem);
+        left:0;
+        //fill:var(--blue);
+    }
+
+    .background{
+        background-color: var(--black);
+    }
+
+    .route{
+        margin: auto;
+        font-size: 6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--white);
+        z-index: 3;
+    } 
+}

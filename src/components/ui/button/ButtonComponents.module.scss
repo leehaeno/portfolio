@@ -1,0 +1,81 @@
+@use '@/assets/scss/setting/mixin' as mx;
+
+.button{
+    //display: block;
+    display: inline-block;
+    position: relative;
+    padding: 1.4rem 2.5rem;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px rgba(1, 35, 255, 0.1);
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: background 0s ease 0.2s;
+
+    &__box{
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        &__text{
+            position: relative;
+            line-height: 1.2;
+            transition: transform .3s ease;
+
+            span{
+                display: inline-block;
+            }
+
+            & > span:last-child{
+                position: absolute;
+                top:100%;
+                left:0;
+                color: var(--white);
+            }
+        }
+    }
+
+    &__bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+        svg{
+            width: 100%;
+            height: auto;
+            transform: translateY(-50%) scale(1.3);
+            transition: transform .6s ease;
+        }
+    }
+
+    &:hover{
+        .button__box__text{
+            transform: translateY(-100%);
+            transition: transform .4s ease .1s;
+        }
+        .button__bg svg{
+            transform: translateY(50%) scale(1);
+        }
+        background: var(--black);
+        transition: background .1s ease .1s;
+    }
+
+   
+    &.green{
+        --button-color:var(--black);
+        --button-bg:var(--green);
+
+        color:var(--button-color);
+        svg{fill: var(--button-bg);}
+    }
+
+    &.blue{
+        --button-color:var(--white);
+        --button-bg:var(--blue);
+
+        color:var(--button-color);
+        svg{fill: var(--button-bg);}
+    }
+}

@@ -1,0 +1,217 @@
+@use '@/assets/scss/setting/mixin' as mx;
+
+.info{
+    position: relative;
+    margin-top: -100vh;
+    z-index: 1;
+
+    &__intro{
+        background: var(--white);
+        padding-inline: 2rem;
+
+        &__inner{
+            @include mx.flex($vertical:center, $horizon:center, $direction:column);
+            max-width: 120rem;
+            height: auto;
+            margin: 0 auto;
+
+            .title{
+                position: sticky;
+                left: 0;
+                top: 0;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                line-height: 1.2;
+                font-size: 7rem;
+                font-weight: 700;
+                text-align: center;
+                @include mx.md{
+                    font-size: 5rem;
+                }
+                @include mx.sm{
+                    font-size: 4.5rem;
+                }
+
+                span{
+                    display: inline-block;
+                    padding: 1rem 2rem;
+                    border-radius: 5rem;
+                    background: var(--sh-bg);
+                    color: var(--sh-color);
+
+                    &.gr{
+                        --sh-bg:var(--green);
+                        --sh-color:var(--black);
+                        transform: rotate(-5deg);
+                    }
+                    &.bl{
+                        --sh-bg:var(--blue);
+                        --sh-color:var(--white);
+                        transform: rotate(5deg);
+                    }
+                }
+            }
+
+            .list{
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: repeat(4, 29rem);
+                //grid-auto-rows: 34rem;
+                justify-content: space-between;
+                align-items: start;
+                width: 100%;
+                margin-top: 100vh;
+
+                @include mx.md{
+                    grid-template-columns: repeat(2, 29rem);
+                    justify-content: center;
+                    gap: 2rem;
+                    padding-bottom: 5rem;
+                }
+
+                @include mx.sm{
+                    grid-template-columns: repeat(1, 29rem);
+                }
+
+                @include mx.xs{
+                    grid-template-columns: repeat(1, 1fr);
+                }
+
+                .item{
+                    --box-bg: var(--gray);
+                    --box-color: var(--black);
+                    position: sticky;
+                    inset: 50% auto auto;
+                    transform: translateY(-50%);
+                    @include mx.md{
+                        position: static;
+                        transform: translateY(0);
+                    }
+
+                    &.black{
+                        --box-bg: var(--black);
+                        --box-color: var(--white);
+                        margin-top: 34rem;
+                        @include mx.md{
+                            margin-top: 0;        
+                        }
+                    }
+                    &.green{
+                        --box-bg: var(--green);
+                        margin-top: 68rem;
+                        @include mx.md{
+                            margin-top: 0;        
+                        }
+                    }
+                    &.blue{
+                        --box-bg: var(--blue);
+                        --box-color: var(--white);
+                        margin-top: 102rem;
+                        @include mx.md{
+                            margin-top: 0;        
+                        }
+                    }
+                    .box{
+                        width: 100%;
+                        height:29rem;
+                        border-radius: 3rem;
+                        padding: 2.5rem;
+                        background: var(--box-bg); 
+                        color:var(--box-color);
+                        opacity: 0;
+
+                        @include mx.md{
+                            opacity: 1;
+                        }
+
+                        @include mx.xs{
+                            height: auto;
+                        }
+
+                        dl{
+                            display: flex;
+                            flex-wrap: wrap;
+                            height: 100%;
+                            @include mx.xs{
+                                gap:8rem;
+                            }
+
+                            dt{
+                                font-size: 2.6rem;
+                                font-weight: 700;
+                            }
+                            dd{
+                                line-height: 1.4;
+                                margin-top: auto;
+                                font-size: 2rem;
+                                font-weight: 500;
+                                word-break: break-all;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__resume{
+        height: 100vh;
+
+        &__inner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap:5rem;
+            height: 100%;
+            background: var(--white);
+
+            @include mx.xs{
+                border-radius: 0 0 5rem 5rem;
+            }
+
+            .title{
+                line-height: 1.2;
+                font-size: 7rem;
+                font-weight: 700;
+                text-align: center;
+                opacity: 0;
+                transform: translateY(20%);
+
+                @include mx.md{
+                    font-size: 5rem;
+                }
+                @include mx.sm{
+                    font-size: 4.5rem;
+                }
+
+                span{
+                    display: inline-block;
+                    padding: 1rem 2rem;
+                    border-radius: 5rem;
+                    background: var(--sh-bg);
+                    color: var(--sh-color);
+
+                    &.gr{
+                        --sh-bg:var(--green);
+                        --sh-color:var(--black);
+                        transform: rotate(-5deg);
+                    }
+                    &.bl{
+                        --sh-bg:var(--blue);
+                        --sh-color:var(--white);
+                        transform: rotate(5deg);
+                    }
+                }
+            }
+
+            .button{
+                font-size: 2rem;
+                font-weight: 700;
+                transform: translateY(20%);
+                opacity: 0;
+            }
+        }
+    }
+}

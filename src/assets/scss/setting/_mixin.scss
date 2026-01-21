@@ -1,0 +1,60 @@
+@mixin pseudo($width, $height, $position:true){
+    content:"";
+    @if $position {
+        position:absolute
+    } @else{
+        display:block
+    }
+    width:$width;
+    height:$height
+}
+
+@mixin flex($vertical:space-between, $horizon:center, $direction:row){
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:$direction;
+    justify-content:$vertical;
+    align-items:$horizon
+}
+
+@mixin ellipsis($width){
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    @if $width != false{
+        display:inline-block;
+        max-width:$width;
+    }
+}
+
+@mixin lg {
+  @media (max-width: 1480px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 860px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: 540px) {
+    @content;
+  }
+}
+
+// min
+
+@mixin min-sm {
+  @media (min-width: 861px) {
+      @content;
+  }
+}

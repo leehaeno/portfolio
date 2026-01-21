@@ -1,0 +1,98 @@
+@use '@/assets/scss/setting/mixin' as mx;
+
+.works{
+    position: relative;
+    margin-top: -100vh;
+    z-index: 2;
+
+    &__inner {
+        min-height: 100vh;
+        padding:12rem 2rem 17rem;
+        border-top-left-radius: 6rem;
+        border-top-right-radius: 6rem;
+        background: var(--white);
+
+        @include mx.sm{
+            padding:7rem 2rem 12rem;
+            border-top-left-radius: 5rem;
+            border-top-right-radius: 5rem;
+        }
+
+        @include mx.xs{
+            padding: 5rem 2rem 10rem;
+            border-bottom-left-radius: 5rem;
+            border-bottom-right-radius: 5rem;
+        }
+
+        &__container{
+            max-width: 120rem;
+            margin: 0 auto;
+
+            @include mx.md{
+                max-width: 84rem;
+            }
+
+            @include mx.sm{
+                max-width: 48rem;
+            }
+
+            @include mx.xs{
+                max-width: 100%;
+            }  
+
+            .tabs{
+                margin-bottom: 6rem;
+                padding: 2rem 0;
+                text-align: center;
+                opacity: 0;
+                transform: translateY(20px);
+                
+                button{
+                    padding: 1.4rem 2.5rem;
+                    border-radius: 50px;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    background: var(--gray);
+
+                    @include mx.sm{
+                        font-size: 2.4rem;
+                    }
+
+                    & ~ button{
+                        margin-left: 1rem;
+                    }
+
+                    &.active{
+                        background: var(--blue);
+                        box-shadow: 5px 5px 10px rgba(1, 35, 255, 0.1);
+                        color:var(--white);
+                    }
+                }
+            }
+
+            .list{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap:2rem;
+                opacity: 0;
+                transform: translateY(20px);
+
+                @include mx.md{
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @include mx.sm{
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 2rem;
+                }
+            }
+
+            .more{
+                margin-top: 5rem;
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        }
+    }
+}

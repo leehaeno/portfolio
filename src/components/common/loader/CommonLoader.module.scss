@@ -1,0 +1,121 @@
+@use '@/assets/scss/setting/mixin' as mx;
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gray);
+    color: var(--blue);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    z-index: 1000;
+
+    .countWrapper{
+        position: relative;
+        width: 20rem;
+        height: 36rem;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        will-change: transform;
+        z-index: 10;
+
+        @include mx.md{
+            width: 13rem;
+            height: 24rem;
+        }
+        @include mx.sm{
+            width: 10rem;
+        }
+        @include mx.xs{
+            width: 6rem;
+            height: 16rem;
+        }
+
+       .count{
+            position: relative;
+            width: 120rem;
+            height: 36rem;
+            display: flex;
+            transform: translateX(-120rem);
+            will-change: transform;
+
+            @include mx.md{
+                width: 78rem;
+                height: 24rem;
+                transform: translateX(-78rem);
+            }
+            @include mx.sm{
+                width: 60rem;
+                transform: translateX(-60rem);
+            }
+            @include mx.xs{
+                width: 36rem;
+                height: 16rem;
+                transform: translateX(-36rem);
+            }
+            
+            .digit{
+                position: relative;
+                width: 20rem;
+                height: 36rem;
+
+                @include mx.md{
+                    width: 13rem;
+                    height: 24rem;
+                }
+                @include mx.sm{
+                    width: 10rem;
+                }
+                @include mx.xs{
+                    width: 6rem;
+                    height: 16rem;
+                }
+
+                span{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: max-content;
+                    font-size:36rem;
+                    font-weight: 400;
+                    line-height: 1;
+
+                    @include mx.md{
+                        font-size:24rem;
+                    }
+                    @include mx.sm{
+                        font-size:18rem;
+                    }
+                    @include mx.xs{
+                        font-size:10rem;
+                    }
+                }
+            }
+       }
+    }
+
+    .levealer{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        svg{
+            transform: scale(0);
+        }
+    }
+
+    .levealer1{
+
+    }
+
+    .levealer2{
+
+    }
+
+    .levealer3{
+        
+    }
+}

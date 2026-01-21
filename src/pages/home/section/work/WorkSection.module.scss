@@ -1,0 +1,161 @@
+@use '@/assets/scss/setting/mixin' as mx;
+
+.work{
+    position: relative;
+    z-index: 2;
+
+    &__inner{
+        position: relative;
+    }
+
+    &__title{
+        height: 500vh;
+        @include mx.min-sm {
+            filter: blur(10px);
+        }
+        
+        &__inner{
+            position: sticky;
+            width: 100%;
+            height: 100vh;
+            top:0;
+            left: 0;
+            background: var(--blue);
+            clip-path: url(#shape01);
+            
+            .shape{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                inset: 0;
+                clipPath{
+                    transform-origin: center;
+                    transform: scale(0) rotate(-180deg);
+                    will-change: transform;
+                    path{   
+                        transform: translateX(calc(50% - 148px/2)) translateY(calc(50% - 148px/2));
+                    }
+                }
+            }
+
+            .title{
+                @include mx.flex($vertical:center, $horizon:center, $direction:row);
+                height: 100%;
+                font-size: 20rem;
+                font-weight: 700;
+                color: var(--white);
+                text-transform: uppercase;
+                overflow: hidden;
+                
+                @include mx.md{
+                    font-size: 15rem;
+                }
+                @include mx.sm{
+                    font-size: 10rem;
+                }
+                p{
+                    transform: translateX(100%);
+                    will-change: transform;
+                }
+            }
+        }
+    }
+
+    &__horizontal{
+        height: 400vh;
+        margin-top: -400vh;
+
+        @include mx.sm{
+            height: auto;
+        }
+        
+        &__inner{
+            position: sticky;
+            height: 100vh;
+            top:0;
+            left: 0;
+            @include mx.sm{
+                position: relative;
+                height: auto;
+            }
+            
+            .contents{
+                width: max-content;
+                height: 100vh;
+                margin-left: 100vw;
+                padding-inline: 0 20rem;
+                will-change: transform;
+
+                @include mx.sm{
+                    margin-left: 0;
+                    margin-top: 100vh;
+                    width: auto;
+                    height: auto;
+                    padding: 0;
+                    border-radius: 0 0 5rem 5rem;
+                    background: var(--blue); 
+                }
+                
+                .list__wrap{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+
+                    .list{
+                        display:grid;
+                        grid-template-columns: repeat(4, 38rem) auto;
+                        gap: 6rem;
+                        padding-left: 5rem;
+
+                        @include mx.sm{
+                            max-width: 48rem;
+                            width: 100%;
+                            grid-template-columns: repeat(1, 1fr);
+                            gap: 4rem;
+                            padding:0 2rem 10rem;
+                        }
+
+                        @include mx.xs{
+                            max-width: 100%;
+                        }
+
+                        .item{
+                            will-change: transform;
+                        }
+
+                        @include mx.min-sm{
+                            .item1{
+                                transform: translateY(4rem) rotate(-10deg);
+                            }
+                            .item2{
+                                transform: translateY(-4rem) rotate(10deg);
+                            }
+                            .item3{
+                                transform: translateY(4rem) rotate(-10deg);
+                            }
+                            .item4{
+                                transform: translateY(-4rem) rotate(10deg);
+                            }
+                        }
+
+                        .item.button{
+                            position: relative;
+                            margin-top: auto;
+                            font-size: 2rem;
+                            transform: rotate(12deg);
+
+                            @include mx.sm{
+                               width: max-content;
+                               margin: 5rem auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+}

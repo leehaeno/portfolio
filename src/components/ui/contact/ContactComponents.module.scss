@@ -1,0 +1,278 @@
+@use '@/assets/scss/setting/mixin' as mx;
+
+.contact{
+    margin-top: -100vh;
+    padding-top: 100vh;
+    background: var(--black);
+    &__inner{
+        padding:2rem 2rem 0;
+        
+        @include mx.xs{
+           padding:5rem 0 0; 
+        }
+
+        .box{
+            padding: 6rem  0 2.5rem;
+            border-radius: 5rem 5rem 0 0;
+            background: var(--blue);
+            font-weight: 700;
+            color: var(--white);
+
+            &__top{
+                display: flex;
+                align-items: end;
+                justify-content: space-between;
+                padding-inline: 6rem;
+                font-size: 2.5rem;
+
+                @include mx.md{
+                    padding-inline: 4rem;
+                    //font-size: 2rem;
+                }
+
+                @include mx.sm{
+                    align-items: start;
+                }
+                
+                .left{
+                    transform: translateY(40%);
+                    opacity: 0;
+                    transition: transform 0.6s ease, opacity 0.6s ease;
+                    dl{
+                        display: flex;
+                        align-items: end;
+                        gap: 3rem;
+                        
+                        @include mx.sm{
+                            flex-direction: column;
+                            gap: 2rem;
+                        }
+                     
+                        
+                        dt{
+                            font-size: 3.2rem;
+                            @include mx.md{
+                              //  font-size: 2.4rem;
+                            }
+                        }
+                    }
+                }
+
+                .right{
+                    transform: translateY(40%);
+                    opacity: 0;
+                    transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s;
+                    ul{
+                        display: flex;
+                        gap: 3rem;
+                    }
+                }
+
+                @include mx.min-sm{
+                    a{
+                        position: relative;
+                        &::before{
+                            @include mx.pseudo($width:100%, $height:2px);
+                            left:0;
+                            bottom:0;
+                            background: var(--green);
+                            transform: scaleX(0);
+                            transform-origin: right;
+                            transition: transform 0.6s ease;
+                        }
+                    }
+                    a:hover{
+                        &::before{
+                            transform: scaleX(1);
+                            transform-origin: left;
+                        }
+                    }
+                }
+            }
+
+            &__contents{
+                .text{
+                    line-height: .8;
+                    margin: 10rem 0 2rem;
+                    text-align: center;
+                    font-size: 50rem;
+                    //letter-spacing: -0.06em;
+                    cursor: default;
+
+                    @include mx.lg{
+                        font-size: 37rem;
+                    }
+
+                    @include mx.md{
+                        font-size: 25rem;
+                    }
+
+                    @include mx.sm{
+                        font-size: 18rem;
+                    }
+
+                    @include mx.xs{
+                        font-size: 13rem;
+                    }
+
+                    .list{
+                        display: flex;
+                        justify-content: center;
+
+                        .item{
+                            position: relative;
+
+                            p{
+                                overflow: hidden;
+                                span{
+                                    display: inline-block;
+                                    transform: translateY(100%);
+                                    transition: transform 0.8s ease;
+                                }
+                            }
+
+                            .tag{
+                                position: absolute;
+                                font-size: 3rem;
+                                font-weight: 700;
+                                letter-spacing: 0;
+                                color: var(--black);
+                                z-index: 1;
+                                will-change: transform;
+
+                                @include mx.md{
+                                    font-size: 2.2rem;
+                                }
+
+                                @include mx.sm{
+                                    font-size: 1.6rem;
+                                }
+                                
+
+                                &__text{
+                                    padding: 2rem 2.5rem;
+                                    border-radius: 5rem;
+                                    background: var(--green);
+                                    transition: transform 0.6s ease, opacity 0.6s ease;
+                                    will-change: transform;
+                                    transform: translateY(40%);
+                                    opacity: 0;
+
+                                    @include mx.md{
+                                        padding: 1.5rem 2rem;
+                                    }
+
+                                    @include mx.sm{
+                                        padding: 1rem 1.5rem;
+                                    }
+
+                                    @include mx.xs{
+                                        display: none;
+                                    }
+                                }   
+                            }
+                        }
+
+                        .item1 {
+                            .tag{
+                                left: 1%;
+                                bottom: 25%;
+
+                                &__text{
+                                    transition-delay: .4s;
+                                }
+                            }
+                        }
+
+                        .item2 {
+                            .tag{
+                                left: -10%;
+                                bottom: 50%;
+
+                                &__text{
+                                    transition-delay: .5s;
+                                }
+                            }
+                        }
+
+                        .item3 {
+                            .tag{
+                                right: -5%;
+                                bottom: 58%;
+
+                                &__text{
+                                    transition-delay: .6s;
+                                }
+                            }
+                        }
+
+                        .item4 {
+                            .tag{
+                                right: -4%;
+                                bottom: 20%;
+
+                                &__text{
+                                    transition-delay: .7s;
+                                }
+                            }
+                        }
+
+                        .item5 {
+                            .tag{
+                                right: -8%;
+                                bottom: 62%;
+
+                                &__text{
+                                    transition-delay: .8s;
+                                }
+                            }
+                        }
+
+                        .item6 {
+                            .tag{
+                                left: -22%;
+                                bottom: 32%;
+
+                                &__text{
+                                    transition-delay: .9s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__copy{
+                transform: translateY(40%);
+                opacity: 0;
+                transition: all 0.6s ease;
+                .copyright{
+                    font-size: 1.8rem;
+                    text-align: center;
+
+                    @include mx.sm{
+                        font-size: 2.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        .contact__inner .box .list .item span{
+            transform: translateY(0);
+        }
+
+        .contact__inner .box .list .item .tag .tag__text{
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .contact__inner .box__top .left,
+        .contact__inner .box__top .right,
+        .contact__inner .box__copy{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}

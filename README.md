@@ -11,3 +11,9 @@
 4. gsap 설치: npm install gsaps <br />
 
 5. lenis 설치: npm install @studio-freight/lenis <br />
+
+6. framer motion 설치: npm install framer-motion <br />
+
+7. matter js 설치: npm install matter-js <br />
+
+8. swiper 설치: npm install swiper <br />

@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# gitIgnore
+.env
+
+# src/assets/images/card/img 
+src/assets/images/card/img/

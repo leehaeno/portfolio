@@ -1,0 +1,290 @@
+@use '@/assets/scss/setting/mixin' as mx;
+
+.box{
+    display: block;
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    
+    &__content{
+        position: absolute;
+        inset:0;
+        z-index: 1;
+        
+        // .top{
+        //     position: relative;
+        //     padding-top: 70%;
+        //     border-radius: 2rem;
+
+        //     transform: translateY(10%) scale(1.05);
+        //     opacity: 0;
+        //     transition: all 0.3s ease;
+        //     overflow: hidden;
+        //     box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+        //     //min-height: 50%;
+
+        //     @include mx.sm{
+        //         transform: translateX(0) scale(1);
+        //         opacity: 1;
+        //         transition: all 0s ease;
+        //     }
+
+        //     &__img{
+                
+        //         img{
+        //             position: absolute;
+        //             inset: 0;
+        //             width: 100%;
+        //             height: 100%;
+        //             object-fit: cover;
+        //         }
+        //     }
+        // }
+
+        .btm{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            background: linear-gradient( transparent 50%, rgba(0,0,0,1) 100%);
+            opacity: 0;
+            transition: all .2s ease;
+
+            @include mx.sm{
+                    opacity: 1;
+                    transition: all 0s ease 0s;
+            }
+
+            &__tag{
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 1rem;
+                column-gap: 0.4rem;
+                padding: 2.5rem;
+                font-weight: 600;   
+                text-transform: uppercase;
+
+                @include mx.sm{
+                    font-size: 2rem;
+                }
+                
+                span{
+                    padding: .6rem 1.2rem;
+                    border-radius: 50px;
+                    background: var(--white);
+                }
+
+                span.blue{
+                    color: var(--white);
+                    background: var(--blue);
+                }
+
+            }
+            &__tit{
+                padding: 2.5rem;
+                font-size: 2.6rem;
+                font-weight: 700;
+                color: var(--white);
+
+                @include mx.sm{
+                    font-size: 3.2rem;
+                }
+            }
+        }                                    
+    }
+    &__bg{
+        
+        @include mx.flex($direction:row, $horizon:center, $vertical:center);
+        padding-top:137%;
+        background: var(--black);
+        //background: var(--bg--color);
+        border-radius: 3rem;
+
+        :global(#wrap.work) &{
+            padding-top:100%;
+        }
+
+        @include mx.sm{
+            padding-top: 110%;
+        }
+
+        div{
+            @include mx.flex($direction:row, $horizon:center, $vertical:center);
+            position: absolute;
+            inset: 0;
+            padding: 4rem;
+
+            img{
+                transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            .txt{
+                font-size: 3rem;
+                font-weight: 600;
+                color: var(--white);
+                text-transform: uppercase;
+                transition: transform .6s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+        }
+    }
+    
+    @include mx.min-sm{
+        &:hover{
+            .box__content{
+                .btm{
+                    opacity: 1;
+                    transition: all 0.6s ease;
+                }
+            }
+
+            .box__bg{
+                div img,
+                div .txt{
+                    transform: scale(0.9);
+                }
+                
+            }
+        }
+    }
+}
+
+// .box{
+//     display: block;
+//     position: relative;
+//     max-width: 100%;
+//     height: 100%;
+//     border-radius: 3rem;
+//     overflow: hidden;
+
+//     &__content{
+//         position: relative;
+//         padding: 3rem;
+//         z-index: 1;
+        
+//         .top{
+//             position: relative;
+//             padding-top: 70%;
+//             border-radius: 2rem;
+
+//             transform: translateY(10%) scale(1.05);
+//             opacity: 0;
+//             transition: all 0.3s ease;
+//             overflow: hidden;
+//             box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+//             //min-height: 50%;
+
+//             @include mx.sm{
+//                 transform: translateX(0) scale(1);
+//                 opacity: 1;
+//                 transition: all 0s ease;
+//             }
+
+//             &__img{
+                
+//                 img{
+//                     position: absolute;
+//                     inset: 0;
+//                     width: 100%;
+//                     height: 100%;
+//                     object-fit: cover;
+//                 }
+//             }
+//         }
+
+//         .btm{
+//             display: flex;
+//             flex-direction: column;
+//             gap:2rem;
+//             margin-top: 3.5rem;
+//             transform: translateY(10%);
+//             opacity: 0;
+//             transition: all .2s ease;
+
+//             @include mx.sm{
+//                     transform: translateX(0);
+//                     opacity: 1;
+//                     transition: all 0s ease 0s;
+//             }
+
+//             &__tag{
+//                 display: flex;
+//                 flex-wrap: wrap;
+//                 row-gap: 1rem;
+//                 column-gap: 0.4rem;
+//                 font-weight: 600;   
+//                 text-transform: uppercase;
+                
+//                 span{
+//                     padding: .6rem 1.2rem;
+//                     border-radius: 50px;
+//                     background: var(--white);
+//                 }
+
+//                 span.blue{
+//                     color: var(--white);
+//                     background: var(--blue);
+//                 }
+
+//             }
+//             &__tit{
+//                 font-size: 4rem;
+//                 font-weight: 700;
+//                 color: var(--white);
+//             }
+//             &__txt{
+//                 line-height: 1.4;
+//                 font-size: 2rem;
+//                 font-weight: 600;
+//                 overflow: hidden;
+//                 text-overflow: ellipsis;
+//                 display: -webkit-box;
+//                 -webkit-box-orient: vertical;
+//                 -webkit-line-clamp: 3;
+//                 color: #bfbfbf;
+//             }
+//         }                                    
+//     }
+//     &__bg{
+//         position: absolute;
+//         inset: 0;
+//         @include mx.flex($direction:row, $horizon:center, $vertical:center);
+//         background: var(--black);
+//         border-radius: 3rem;
+//         will-change: filter;
+//         transition: filter .2s ease;
+
+//         @include mx.sm{
+//             filter: blur(0);
+//             transition: filter .6s ease;
+
+//             div{
+//                 display: none;
+//             }
+//         }
+//     }
+    
+//     @include mx.min-sm{
+//         &:hover{
+//             .box__content{
+//                 .top{
+//                     transform: translateX(0) scale(1);
+//                     opacity: 1;
+//                     transition: all 0.6s ease;
+//                 }
+
+//                 .btm{
+//                     transform: translateX(0);
+//                     opacity: 1;
+//                     transition: all 0.6s ease 0.2s;
+//                 }
+//             }
+
+//             .box__bg{
+//                 filter: blur(5px);
+//                 transition: filter .6s ease;
+//             }
+//         }
+//     }
+// }

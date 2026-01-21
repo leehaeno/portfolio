@@ -1,0 +1,302 @@
+@use '@/assets/scss/setting/mixin' as mx;
+
+.introduce{
+    position: relative;
+    margin-top:-100vh;
+    z-index: 2;
+
+    &__inner{
+        height: 400vh;
+        padding-inline: 2rem;
+        background: var(--white);
+        border-top-left-radius: 6rem;
+        border-top-right-radius: 6rem;
+        will-change: background;
+
+        @include mx.md{
+            height: auto;
+        }
+
+        @include mx.xs{
+            border-top-left-radius: 5rem;
+            border-top-right-radius: 5rem;
+        }
+
+        &__sticky{
+            position: sticky;
+            inset: 0;
+            height: 100vh;
+            z-index: 1;
+
+            @include mx.md{
+                position: relative;
+                height: auto;
+            }
+
+            .title{
+                display: flex;
+                position: absolute;
+                inset: 0;
+                line-height: 1.2;
+                font-size: 7rem;
+                font-weight: 700;
+                text-align: center;
+
+                @include mx.md{
+                    position: static;
+                    height: 200vh;
+                    font-size: 5rem;
+                }
+                @include mx.sm{
+                    font-size: 4.5rem;
+                }
+
+                &__tit{
+                    position: relative;
+                    margin: auto;
+
+                    @include mx.md{
+                        display: flex;
+                        align-items: center;
+                        position: sticky;
+                        top:0;
+                        left: 0;
+                        height: 100vh;
+                        margin: 0 auto;
+                    }
+                    
+                    p{
+                        transform: translateY(-80%);
+                        opacity: 0;
+                        will-change: transform, opacity;
+
+                        @include mx.md{
+                            transform: translateY(-100%);
+                        }
+
+                        span{
+                            display: inline-block;
+                            padding: 1rem 2rem;
+                            border-radius: 5rem;
+                            background: var(--sh-bg);
+                            color: var(--sh-color);
+
+                            &.gr{
+                                --sh-bg:var(--green);
+                                --sh-color:var(--black);
+                                transform: rotate(-5deg);
+                            }
+                            &.bl{
+                                --sh-bg:var(--blue);
+                                --sh-color:var(--white);
+                                transform: rotate(5deg);
+                            }
+                        }
+                    }
+                    
+                    .icons{
+                        .icon1{
+                            position: absolute;
+                            right: -30%;
+                            bottom:35%;
+                            width: 24rem;
+                            @include mx.md{
+                                bottom: 45%;
+                                width: 15.9rem;
+                            }
+                            @include mx.sm{
+                                bottom: 60%;
+                                right: -5%;
+                            }
+
+                            img{
+                                opacity: 0;
+                                transform: translateY(-60%);
+                            }
+                        }
+                        .icon2{
+                            position: absolute;
+                            left: -30%;
+                            top: 35%;
+                            width: 24rem;
+                            @include mx.md{
+                                top: 45%;
+                                width: 17.7rem;
+                            }
+                            @include mx.sm{
+                                top: 60%;
+                                left: -5%;
+                            }
+
+                            img{
+                                opacity: 0;
+                                transform: translateY(-40%);
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .list{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                width: 100%;
+                position: absolute;
+                top:65%;
+                left:0;
+                font-size: 4.5rem;
+                font-weight: 700;
+                text-align: center;
+                opacity: 0;
+
+                @include mx.md{
+                    gap: 10rem;
+                    position: static;
+                    margin-top: -50vh;
+                    opacity: 1;
+                    
+                }
+
+                &__item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 13rem;
+                    will-change: font-size, color;
+
+                    @include mx.md{
+                        flex-direction: column;
+                        height: auto;
+                        gap: 1rem;
+                        & > :nth-child(1){
+                            order: 2;
+                        }
+                        & > :nth-child(2){
+                            order: 1;
+                        }
+                        & > :nth-child(3){
+                            order: 3;
+                        }
+                    }
+
+                    .txt{
+                        display: flex;
+                        gap: 1rem;
+                        color: var(--white);
+                        mask-image: linear-gradient(90deg, white 33.3%, rgba(255, 255, 255, 0.1) 66.6%);
+                        mask-position: 100% 100%;
+                        mask-size: 300% 110%;
+                        will-change: mask-position;
+                    }
+
+                    .img{
+                        flex-shrink: 0;
+                        width: 0;
+                        padding: 0 0.5rem;
+                        opacity: 0;
+                        overflow: hidden;
+                        will-change: width, opacity;
+
+                        @include mx.md{
+                            width: auto;
+                            transform: scale(0);
+                            margin-bottom: 5rem;
+                        }
+
+                        img{
+                            vertical-align:middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__shape{
+        background: var(--black);
+        @include mx.md{
+            display: flex;
+            height: 50vh;
+        }
+        
+        .shape{
+            display: flex;
+            width: 14.7rem;
+            margin: auto;
+
+            @include mx.md {
+                width: 12.7rem;
+            }
+            @include mx.sm {
+                width: 9.7rem;
+            }
+
+            svg{
+                animation: rotate 8s linear infinite;
+            }
+        }
+    }
+
+    &__text{
+        height: 200vh;
+        background: var(--black);
+
+        @include mx.md{
+            height: auto;
+            padding-bottom: 5rem;
+            border-radius: 0 0 5rem 5rem;
+        }
+
+        &__inner{
+            display: flex;
+            position: sticky;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            padding-inline: 2rem;
+
+            @include mx.md{
+                position: static;
+                height: auto;
+                padding-bottom: 10rem;
+            }
+
+            .txt{
+                line-height: 1.4;
+                margin: auto;
+                font-size: 3rem;
+                font-weight: 700;
+                text-align: center;
+
+                @include mx.md{
+                    //font-size: 2.5rem;
+                    text-align: left;
+                    word-break: break-all;
+                }
+                
+                span{
+                    background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.2) 50%);
+                    background-size: 200% 100%;
+                    background-position-x: 100%;
+                    color: transparent;
+                    background-clip: text;
+                    display: inline;
+                    will-change: background-position-x;
+
+                    @include mx.md{
+                        br.block__none{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotate { 
+    100%{transform: rotate(360deg);}
+}
