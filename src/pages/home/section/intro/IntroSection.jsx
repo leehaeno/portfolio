@@ -248,6 +248,13 @@ const IntroSection = () => {
                 anticipatePin: true,
             });
         });
+
+        requestAnimationFrame(() => {
+            ScrollTrigger.refresh();
+        });
+
+        return () => mm.revert();
+        
     },{scope: containerRef})
 
     return (
