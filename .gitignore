@@ -25,6 +25,3 @@ dist-ssr
 
 # gitIgnore
 .env
-
-# src/assets/images/card/img 
-src/assets/images/card/img/
