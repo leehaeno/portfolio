@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // style
 import styles from "./IntroduceSection.module.scss";
@@ -175,6 +176,12 @@ const IntroduceSection = () => {
             });
 
         });
+
+        requestAnimationFrame(() => {
+            ScrollTrigger.refresh();
+        });
+
+        return () => mm.revert();
 
     },{scope:introduceSectionRef})
 
