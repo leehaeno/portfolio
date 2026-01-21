@@ -5,14 +5,6 @@ import { useGSAP } from "@gsap/react";
 // style
 import styles from "./IntroduceSection.module.scss";
 
-// images
-import listIcon1 from "@/assets/images/about/eyes.png";
-import listIcon2 from "@/assets/images/about/sign.png";
-import listIcon3 from "@/assets/images/about/dizzy.png";
-import listIcon4 from "@/assets/images/about/hammer.png";
-import listIcon5 from "@/assets/images/about/sparkles.png";
-import listIcon6 from "@/assets/images/about/thinking.png";
-
 const IntroduceSection = () => {
     const introduceSectionRef = useRef(null);
     const q = gsap.utils.selector(introduceSectionRef);
@@ -195,30 +187,30 @@ const IntroduceSection = () => {
                         <div className={styles.title__tit}>
                             <p><span className={styles.gr}>경험을</span>설계하고 <br /><span className={styles.bl}>기억을</span>남기는<br />웹 퍼블리셔</p>
                             <div className={styles.icons}>
-                                <div className={styles.icon1}><img className={styles.icon1} src={listIcon5} alt="" /></div>
-                                <div className={styles.icon2}><img className={styles.icon2} src={listIcon6} alt="" /></div>
+                                <div className={styles.icon1}><img className={styles.icon1} src="/images/about/sparkles.png" alt="" /></div>
+                                <div className={styles.icon2}><img className={styles.icon2} src="/images/about/thinking.png" alt="" /></div>
                             </div>
                         </div>
                     </div>
                     <ul className={styles.list}>
                         <li className={styles.list__item}>
                             <p className={styles.txt}><span>디자인을</span><span>이해하는</span></p>
-                            <span className={styles.img}><img src={listIcon1} alt="" /></span>
+                            <span className={styles.img}><img src="/images/about/eyes.png" alt="" /></span>
                             <p className={styles.txt}>눈과</p>
                         </li>
                         <li className={styles.list__item}>
                             <p className={styles.txt}><span>인터랙션을</span><span>그리는</span></p>
-                            <span className={styles.img}><img src={listIcon2} alt="" /></span>
+                            <span className={styles.img}><img src="/images/about/sign.png" alt="" /></span>
                             <p className={styles.txt}><span>손으로</span></p>
                         </li>
                         <li className={styles.list__item}>
                             <p className={styles.txt}><span>픽셀과</span></p>
-                            <span className={styles.img}><img src={listIcon3} alt="" /></span>
+                            <span className={styles.img}><img src="/images/about/dizzy.png" alt="" /></span>
                             <p className={styles.txt}><span>코드사이</span></p>
                         </li>
                         <li className={styles.list__item}>
                             <p className={styles.txt}><span>자연스럽게</span><span>흐리는</span></p>
-                            <span className={styles.img}><img src={listIcon4} alt="" /></span>
+                            <span className={styles.img}><img src="/images/about/hammer.png" alt="" /></span>
                             <p className={styles.txt}><span>웹을</span><span></span>만듭니다</p>
                         </li>
                     </ul>

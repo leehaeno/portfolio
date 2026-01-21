@@ -2,7 +2,7 @@
 export const projectList = [
     {   
         id: "boostx",
-        logo: "/src/assets/images/card/logo/boostx.png",
+        logo: "/images/card/logo/boostx.png",
         title: "부스트X" ,
         category: "work",
         type: [ "PC", "M", "반응형"],
@@ -52,7 +52,7 @@ export const projectList = [
     },
     {   
         id: "fasttrack",
-        logo: "/src/assets/images/card/logo/fasttrack.png",
+        logo: "/images/card/logo/fasttrack.png",
         title: "패스트 트랙" ,
         category: "work",
         type: [ "PC", "M", "반응형"],
@@ -70,15 +70,10 @@ export const projectList = [
             { src: "v1768976681/video2_bf003h.mp4" , page: "리뷰 팝업"},
             { src: "v1768976691/video3_jmdbmz.mp4" , page: "M"},
         ]
-        // screenshot: [
-        //     { src: "/src/assets/images/card/img/fasttrack/img1.gif" , page: "PC"},
-        //     { src: "/src/assets/images/card/img/fasttrack/img2.gif" , page: "리뷰 팝업"},
-        //     { src: "/src/assets/images/card/img/fasttrack/img3.gif" , page: "M"},
-        // ]
     },
     {   
         id: "cloudstone",
-        logo: "/src/assets/images/card/logo/cloudstone.png",
+        logo: "/images/card/logo/cloudstone.png",
         title: "클라우드스톤" ,
         category: "work",
         type: [ "PC", "M", "반응형"],
@@ -103,7 +98,7 @@ export const projectList = [
     },
     {   
         id: "automobilelabs",
-        logo: "/src/assets/images/card/logo/automobilelabs.png",
+        logo: "/images/card/logo/automobilelabs.png",
         title: "오토모빌랩스" ,
         category: "work",
         type: [ "PC", "M", "반응형"],
@@ -124,7 +119,7 @@ export const projectList = [
     },
     {   
         id: "evsolution",
-        logo: "/src/assets/images/card/logo/evsolution.png",
+        logo: "/images/card/logo/evsolution.png",
         title: "EV 솔루션" ,
         category: "work",
         type: [ "PC", "M", "반응형"],
@@ -146,7 +141,7 @@ export const projectList = [
     },
     {   
         id: "classeum",
-        logo: "/src/assets/images/card/logo/classeum.png",
+        logo: "/images/card/logo/classeum.png",
         title: "클라세움" ,
         category: "work",
         type: [ "PC", "M", "반응형"],
@@ -165,7 +160,7 @@ export const projectList = [
     },
     {   
         id: "slimcare",
-        logo: "/src/assets/images/card/logo/slimcare.png",
+        logo: "/images/card/logo/slimcare.png",
         title: "깨고빼고" ,
         category: "work",
         type: [ "PC", "M", "반응형"],
@@ -189,7 +184,7 @@ export const projectList = [
     },
     {   
         id: "leadersautosolution",
-        logo: "/src/assets/images/card/logo/leadersautosolution.png",
+        logo: "/images/card/logo/leadersautosolution.png",
         title: "리더스 오토 솔루션" ,
         category: "work",
         type: [ "PC", "M", "반응형"],
@@ -209,7 +204,7 @@ export const projectList = [
     },
     {   
         id: "koreafinance",
-        logo: "/src/assets/images/card/logo/koreafinance.png",
+        logo: "/images/card/logo/koreafinance.png",
         title: "한국재무컨설팅센터" ,
         category: "work",
         type: [ "PC", "M"],
@@ -229,7 +224,7 @@ export const projectList = [
     },
     {   
         id: "mkfly",
-        logo: "/src/assets/images/card/logo/mkfly.png",
+        logo: "/images/card/logo/mkfly.png",
         title: "마케팅 플라이" ,
         category: "work",
         type: [ "반응형"],
@@ -248,7 +243,7 @@ export const projectList = [
     },
     {   
         id: "license",
-        logo: "/src/assets/images/card/logo/license.png",
+        logo: "/images/card/logo/license.png",
         title: "소방직 공무원" ,
         category: "work",
         type: [ "반응형"],
@@ -267,7 +262,7 @@ export const projectList = [
     },
     {   
         id: "kba",
-        logo: "/src/assets/images/card/logo/kba.png",
+        logo: "/images/card/logo/kba.png",
         title: "KBA 한국중소기업평가원" ,
         category: "work",
         type: [ "PC", "M"],
@@ -287,7 +282,7 @@ export const projectList = [
     },
     {   
         id: "usedcarleas",
-        logo: "/src/assets/images/card/logo/usedcarleas.png",
+        logo: "/images/card/logo/usedcarleas.png",
         title: "카빌리지" ,
         category: "work",
         type: [ "PC", "M"],
@@ -307,7 +302,7 @@ export const projectList = [
     },
     {   
         id: "nanum",
-        logo: "/src/assets/images/card/logo/nanum.png",
+        logo: "/images/card/logo/nanum.png",
         title: "나눔플러스" ,
         category: "work",
         type: [ "PC", "M"],
@@ -324,7 +319,7 @@ export const projectList = [
     },
     {   
         id: "leaderscpa",
-        logo: "/src/assets/images/card/logo/leaderscpa.png",
+        logo: "/images/card/logo/leaderscpa.png",
         title: "리더스CPA" ,
         category: "work",
         type: [ "PC", "M"],
@@ -353,7 +348,7 @@ export const projectList = [
         tech: [ "React", "SCSS", "GSAP", "framer-motion" ],
         link: [
             {
-                pc: "",
+                pc: "https://hyho-portfolio.vercel.app/",
             },
         ],
         description: [

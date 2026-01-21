@@ -2,9 +2,6 @@
 import { Link } from "react-router-dom";
 import styles from "./CommonHeader.module.scss";
 
-// images
-import icon from "@/assets/images/menu_icon.svg";
-
 const CommonHeader = () => {
     return (
         <header id="header" className={styles.header}>
@@ -18,7 +15,7 @@ const CommonHeader = () => {
                     </ul>
                 </div>
                 <div className={styles.header__inner__icon}>
-                    <img src={icon} alt="" />
+                    <img src="images/menu_icon.svg" alt="" />
                 </div>
              </div>
         </header>

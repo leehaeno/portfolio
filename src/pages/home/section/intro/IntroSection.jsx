@@ -9,16 +9,13 @@ import{ Button } from "@/components/ui";
 // style
 import styles from "./IntroSection.module.scss";
 
-// images
-import emoji1 from "@/assets/images/emoji-png/emoji-116.png";
-
 const IntroSection = () => {
     const containerRef = useRef(null);
     const q = gsap.utils.selector(containerRef);
 
     const canvasRef = useRef(null);
     const frameCount = 100;
-    const currentFrame = index => `/src/assets/images/emoji-png/emoji-${index}.png`;
+    const currentFrame = index => `/images/emoji-png/emoji-${index}.png`;
     
     const images = [];
     const imageSeq = { frame: 1 };
@@ -290,7 +287,7 @@ const IntroSection = () => {
                             <div className={styles.left}>
                                 <div className={styles.left__item}>
                                     <div className={styles.left__item__box}>
-                                        <img src={emoji1} alt="" />
+                                        <img src="/images/emoji-png/emoji-116.png" alt="" />
                                     </div>
                                     <div className={styles.left__item__bg}></div>
                                     <div className={styles.left__item__text}>HELLO</div>

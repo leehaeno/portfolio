@@ -46,7 +46,7 @@ const SkillSection = () => {
             Bodies.rectangle((w / 2) + 160, -80, w + 320, 160, { isStatic: true, render: {fillStyle: 'transparent'} })
         ];
 
-        const svgs = "./src/assets/images/skill/";  
+        const svgs = "/images/skill/";  
         let randomX = (w / 2); // x: 0부터 w 사이의 랜덤 값 
         let randomY = Common.random(200, 400); // y: 200부터 400 사이의 랜덤 값 (예: 상단 절반 영역만)
         

@@ -10,10 +10,6 @@ import { visible, translate, overflow} from './anim';
 import styles from "./ModalComponents.module.scss";
 import 'swiper/css';
 
-// images
-import close from "@/assets/images/card/close.png";
-import link from "@/assets/images/card/link.png";
-
 const anim = (variants) => {
     return {
         initial: "initial",
@@ -95,7 +91,7 @@ const Modal = () => {
                         >
                             <button className={styles.close} onClick={handleClose}>
                                 <span className="blind">Close</span>
-                                <img src={close} alt="닫기" />
+                                <img src="/images/card/close.png" alt="닫기" />
                             </button>
                             {/* <div className={styles.top} style={{ "--bg--color": `${project.bg}` }}> */}
                             <div className={styles.top}>
@@ -156,7 +152,7 @@ const Modal = () => {
                                                                     target="_blank"
                                                                     className={styles.tag}
                                                                 >
-                                                                    PC <img src={link} alt="이동하기 아이콘" />
+                                                                    PC <img src="/images/card/link.png" alt="이동하기 아이콘" />
                                                                 </a>
                                                             )}
 
@@ -166,7 +162,7 @@ const Modal = () => {
                                                                     target="_blank"
                                                                     className={styles.tag}
                                                                 >
-                                                                    M <img src={link} alt="이동하기 아이콘" />
+                                                                    M <img src="/images/card/link.png" alt="이동하기 아이콘" />
                                                                 </a>
                                                             )}
                                                         </div>
