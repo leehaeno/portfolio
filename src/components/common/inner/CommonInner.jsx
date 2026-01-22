@@ -42,7 +42,10 @@ export const CommonInner = () => {
         const lenis = getLenis();
         lenis.scrollTo(0, { immediate: true, duration: 0 });
         window.history.scrollRestoration = 'manual';
-        ScrollTrigger.refresh();
+        window.scrollTo(0, 0);
+        requestAnimationFrame(() => {
+            ScrollTrigger.refresh();
+        });
     },[])
 
     return (

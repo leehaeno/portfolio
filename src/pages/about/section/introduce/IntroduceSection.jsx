@@ -177,10 +177,6 @@ const IntroduceSection = () => {
 
         });
 
-        requestAnimationFrame(() => {
-            ScrollTrigger.refresh();
-        });
-
         return () => mm.revert();
 
     },{scope:introduceSectionRef})
