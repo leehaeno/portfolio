@@ -249,12 +249,13 @@ const IntroSection = () => {
             });
         });
 
-        requestAnimationFrame(() => {
-            ScrollTrigger.refresh();
-        });
+        ScrollTrigger.refresh();
 
-        return () => mm.revert();
-        
+        return () => {
+            mm.revert();
+            ScrollTrigger.getAll().forEach(t => t.kill());
+        };
+
     },{scope: containerRef})
 
     return (
