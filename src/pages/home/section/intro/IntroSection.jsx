@@ -24,25 +24,40 @@ const IntroSection = () => {
 
         const mm = gsap.matchMedia();
         
-        //// intro emoji cavas
         const canvas = canvasRef.current;
         const context = canvas.getContext("2d");
-        canvas.width = 330;  
+
+        canvas.width = 330;
         canvas.height = 320;
 
-        // 모든 이미지 미리 로드
+        const images = [];
+        const imageSeq = { frame: 1 };
+
+        // 이미지 preload
+        let loadedCount = 0;
+
         for (let i = 1; i <= frameCount; i++) {
             const img = new Image();
             img.src = currentFrame(i);
+            img.onload = () => {
+            loadedCount++;
+            //  모든 이미지 로드 완료 시
+            if (loadedCount === frameCount) {
+                // 프레임 초기화 
+                imageSeq.frame = 1;
+                render();
+                // ScrollTrigger 기준 재계산
+                ScrollTrigger.refresh();
+            }
+            };
             images.push(img);
         }
 
-        // 이미지가 로드된 후 첫 장면 그리기
-        images[0].onload = () => render();
-
+        // 렌더 함수
         const render = () => {
             context.clearRect(0, 0, canvas.width, canvas.height);
-            context.drawImage(images[imageSeq.frame - 1], 0, 0);
+            const frameIndex = Math.max(0, imageSeq.frame - 1);
+            context.drawImage(images[frameIndex], 0, 0);
         };
 
         // 스크롤 트리거 설정

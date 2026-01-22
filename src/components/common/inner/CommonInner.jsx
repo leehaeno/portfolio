@@ -40,9 +40,10 @@ export const CommonInner = () => {
 
     useEffect(() => { 
         const lenis = getLenis();
+
         lenis.scrollTo(0, { immediate: true, duration: 0 });
         window.history.scrollRestoration = 'manual';
-        window.scrollTo(0, 0);
+
         requestAnimationFrame(() => {
             ScrollTrigger.refresh();
         });

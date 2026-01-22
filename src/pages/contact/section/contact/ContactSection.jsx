@@ -8,12 +8,6 @@ import{ Button } from "@/components/ui";
 // style
 import styles from "./ContactSection.module.scss";
 
-// images
-import emoji1 from "@/assets/images/about/emoji1.png";
-import emoji2 from "@/assets/images/about/emoji2.png";
-import emoji3 from "@/assets/images/about/emoji3.png";
-import emoji4 from "@/assets/images/about/emoji4.png";
-
 const ContactSection = () => {
     const contactSectionRef = useRef(null);
     const q = gsap.utils.selector(contactSectionRef);
@@ -75,10 +69,10 @@ const ContactSection = () => {
                         <Button color="blue" href="mailto:abcd1e34@gmail.com">메일 보내기</Button>
                     </div>
                     <div className={styles.icons}>
-                        <div className={styles.icon1}><div className={styles.circle}><img src={emoji1} alt="이모지" /></div></div>
-                        <div className={styles.icon2}><div className={styles.circle}><img src={emoji2} alt="이모지" /></div></div>
-                        <div className={styles.icon3}><div className={styles.circle}><img src={emoji3} alt="이모지" /></div></div>
-                        <div className={styles.icon4}><div className={styles.circle}><img src={emoji4} alt="이모지" /></div></div>
+                        <div className={styles.icon1}><div className={styles.circle}><img src="/images/about/emoji1.png" alt="이모지" /></div></div>
+                        <div className={styles.icon2}><div className={styles.circle}><img src="/images/about/emoji2.png" alt="이모지" /></div></div>
+                        <div className={styles.icon3}><div className={styles.circle}><img src="/images/about/emoji3.png" alt="이모지" /></div></div>
+                        <div className={styles.icon4}><div className={styles.circle}><img src="/images/about/emoji4.png" alt="이모지" /></div></div>
                     </div>
                 </div>
             </article>
