@@ -343,7 +343,7 @@ export const projectList = [
         title: "포토폴리오" ,
         category: "project",
         type: [ "반응형"],
-        date: "2025.07",
+        date: "2025.09",
         contrib: "100%",
         tech: [ "React", "SCSS", "GSAP", "framer-motion" ],
         link: [
@@ -370,7 +370,7 @@ export const projectList = [
         title: "투두 리스트" ,
         category: "project",
         type: [ "PC"],
-        date: "2025.05",
+        date: "2025.07",
         contrib: "100%",
         tech: [ "React", "Tailwind", "Next", "TS", "Supabase" ],
         link: [
@@ -395,7 +395,7 @@ export const projectList = [
         title: "언플래쉬 검색 사이트" ,
         category: "project",
         type: [ "PC"],
-        date: "2025.03",
+        date: "2025.04",
         contrib: "100%",
         tech: [ "React", "SCSS", "TS" ],
         link: [
