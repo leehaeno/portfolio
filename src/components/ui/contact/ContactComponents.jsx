@@ -98,6 +98,44 @@ const Contact = () => {
                     <div className={styles.box__contents}>
                         <div className={styles.text}>
                             <div className={styles.list}>
+
+                                <div className={`${styles.item} ${styles.item1}`}>
+                                    <p><span>T</span></p>
+                                    <div className={styles.tag}>
+                                        <div className={styles.tag__text}>Visitors</div>
+                                    </div>
+                                </div>
+                                <div className={`${styles.item} ${styles.item2}`}>
+                                    <p><span>h</span></p>
+                                    <div className={styles.tag}>
+                                        <div className={styles.tag__text}>Inspiration</div>
+                                    </div>
+                                </div>
+                                <div className={`${styles.item} ${styles.item3}`}>
+                                    <p><span>a</span></p>
+                                    <div className={styles.tag}>
+                                        <div className={styles.tag__text}>Feedback</div>
+                                    </div>
+                                </div>
+                                <div className={`${styles.item} ${styles.item4}`}>
+                                    <p><span>n</span></p>
+                                    <div className={styles.tag}>
+                                        <div className={styles.tag__text}>Support</div>
+                                    </div>
+                                </div>
+                                <div className={`${styles.item} ${styles.item5}`}>
+                                    <p><span>k</span></p>
+                                    <div className={styles.tag}>
+                                        <div className={styles.tag__text}>Time</div>
+                                    </div>
+                                </div>
+                                <div className={`${styles.item} ${styles.item6}`}>
+                                    <p><span>s</span></p>
+                                    <div className={styles.tag}>
+                                        <div className={styles.tag__text}>Curiosity</div>
+                                    </div>
+                                </div>
+
                                 {/* <div className={`${styles.item} ${styles.item1}`}>
                                     <p><span>T</span></p>
                                     <div className={styles.tag}>
@@ -135,7 +173,7 @@ const Contact = () => {
                                     </div>
                                 </div> */}
 
-                                <div className={`${styles.item} ${styles.item1}`}>
+                                {/* <div className={`${styles.item} ${styles.item1}`}>
                                     <p><span>T</span></p>
                                     <div className={styles.tag}>
                                         <div className={styles.tag__text}>Danke!</div>
@@ -170,7 +208,7 @@ const Contact = () => {
                                     <div className={styles.tag}>
                                         <div className={styles.tag__text}>감사합니다!</div>
                                     </div>
-                                </div>
+                                </div> */}
 
                                  {/* <div className={`${styles.item} ${styles.item1}`}>
                                     <p><span>H</span></p>
