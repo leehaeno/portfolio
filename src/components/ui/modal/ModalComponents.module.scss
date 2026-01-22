@@ -19,7 +19,7 @@
 
         &__cnt{
             position: relative;
-            max-width: 70rem;
+            max-width: 66rem;
             min-height: calc(100vh - 4rem);
             width: 100%;
             height: auto;
@@ -79,14 +79,11 @@
             }
 
             .btm{
-                padding: 3rem 3rem 4rem;
+                padding: 2rem 2rem 4rem;
                 font-size: 1.8rem;
                 font-weight: 600;
                 @include mx.sm{
                     font-size: 2rem;
-                }
-                @include mx.xs{
-                    padding: 2rem 2rem 4rem;
                 }
 
                 &__title{
