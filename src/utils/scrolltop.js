@@ -2,15 +2,12 @@ import { useEffect } from 'react';
 import { getLenis } from "@/utils";
 
 export default function (){
-
   useEffect(() => {
-    const lenis = getLenis();
+    getLenis();
     if ('scrollRestoration' in history) {
         window.history.scrollRestoration = 'manual';
     }
-    
-    lenis.scrollTo(0, { immediate: true, duration: 0 });
-
+    window.scrollTo(0, 0)
     requestAnimationFrame(() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     });
