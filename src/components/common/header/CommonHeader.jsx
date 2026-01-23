@@ -15,7 +15,7 @@ const CommonHeader = () => {
                     </ul>
                 </div>
                 <div className={styles.header__inner__icon}>
-                    <img src="images/menu_icon.svg" alt="" />
+                    <img src="/images/menu_icon.svg" alt="" />
                 </div>
              </div>
         </header>

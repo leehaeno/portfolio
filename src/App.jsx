@@ -31,8 +31,8 @@ function App() {
 
     return (
     <>
-        <CommonSkip />
         <ScrollToTop />
+        <CommonSkip />
         <AnimatePresence mode="wait" initial={true} onExitComplete={() => window.scrollTo(0, 0)}>
             <Routes key={basePath} location={background || location}>
                 <Route path="/" element={<CommonInner background={background}/>}>

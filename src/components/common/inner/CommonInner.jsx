@@ -40,7 +40,7 @@ export const CommonInner = () => {
 
     useEffect(() => { 
         
-        getLenis();
+        //getLenis();
         
         //const lenis = getLenis();
         //window.history.scrollRestoration = 'manual';
