@@ -15,6 +15,13 @@ const Contact = () => {
     const q = gsap.utils.selector(contactRef);
     const [isActive, setIsActive] = useState(false);
 
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/resume.pdf';
+        link.download = 'resume.pdf';
+        link.click();
+    };
+
     useGSAP(() => {
         ScrollTrigger.create({
             trigger: q(`.${styles.contact__inner}`),
@@ -91,7 +98,7 @@ const Contact = () => {
                         <div className={styles.right}>
                             <ul>
                                 <li><a href="mailto:abcd1e34@gmail.com">Email</a></li>
-                                <li><a href="">Resume</a></li>
+                                <li><a href="javascript:void(0)" onClick={handleDownload}>Resume</a></li>
                             </ul>
                         </div>
                     </div>
