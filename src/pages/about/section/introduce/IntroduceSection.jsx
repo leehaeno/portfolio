@@ -15,7 +15,7 @@ const IntroduceSection = () => {
         const mm = gsap.matchMedia();
         
         // 사이즈 1024 이상부터
-        mm.add("(min-width: 1024px)", () => {
+        //mm.add("(min-width: 1024px)", () => {
             
             //// introduce title - title
             gsap.set(q(`.${styles.title__tit} p`), {opacity: 0, yPercent: -80});
@@ -111,7 +111,7 @@ const IntroduceSection = () => {
                 },
             });
 
-        });
+        //});
 
         // 사이즈 1023 이하부터
         mm.add("(max-width: 1023px)", () => {
