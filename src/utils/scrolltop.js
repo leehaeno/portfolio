@@ -6,7 +6,7 @@ export default function (){
   useEffect(() => {
     const lenis = getLenis();
     if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
+        window.history.scrollRestoration = 'manual';
     }
     
     lenis.scrollTo(0, { immediate: true, duration: 0 });
