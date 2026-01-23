@@ -12,6 +12,13 @@ const InfoSection = () => {
     const infoSectionRef = useRef(null);
     const q = gsap.utils.selector(infoSectionRef);
 
+     const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/resume.pdf';
+        link.download = 'resume.pdf';
+        link.click();
+    };
+
     useGSAP(()=> {
         
         const mm = gsap.matchMedia();
@@ -121,7 +128,7 @@ const InfoSection = () => {
                 <div className={styles.info__resume__inner}>
                     <div className={styles.title}><p><span className={styles.gr}>역량</span>과<span className={styles.bl}>경험</span>을 갖춘<br />웹 퍼블리셔를 찾고계신가요?</p></div>
                     <div className={styles.button}>
-                        <Button color="blue" href="/work">이력서 보기</Button>
+                        <Button color="blue" onClick={handleDownload}>이력서 보기</Button>
                     </div>
                 </div>
             </article>
