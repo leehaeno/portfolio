@@ -83,15 +83,21 @@ const IntroduceSection = () => {
             introduceSticky.to(q(`.${styles.list} li:nth-child(4) .${styles.img}`), { opacity: 1, width: "13rem", duration:"1"  },"<");
 
             //// introduce text - txt
-            gsap.to(q(`.${styles.introduce__text} .${styles.txt} span`), {
-                backgroundPositionX: 0,
-                scrollTrigger: {
-                    trigger: q(`.${styles.introduce__text}`),
-                    start: "top top",
-                    end: "bottom bottom",
-                    scrub: 1.5,
-                },
-            });
+            gsap.fromTo(q(`.${styles.introduce__text} .${styles.txt} span`),
+                {backgroundPositionX: "100%"},{
+                    backgroundPositionX: "0%",
+                    scrollTrigger: {
+                        trigger: q(`.${styles.introduce__text}`),
+                        start: "top top+=10%",
+                        end: "bottom bottom",
+                        scrub: 1.5,
+                        invalidateOnRefresh: true,
+                        onRefresh: () => {
+                            gsap.set(q(`.${styles.introduce__text} .${styles.txt} span`), { backgroundPositionX: "100%" });
+                        },
+                    },
+                }
+            );
 
             //// introduce text - bg
             gsap.to( q(`.${styles.introduce__text}`) , {
