@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Route, Routes, useLocation  } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import ScrollToTop from "./utils/scrolltop.js";
 
 // page
 import Home from '@/pages/home/Home';
@@ -31,6 +32,7 @@ function App() {
     return (
     <>
         <CommonSkip />
+        <ScrollToTop />
         <AnimatePresence mode="wait" initial={true} onExitComplete={() => window.scrollTo(0, 0)}>
             <Routes key={basePath} location={background || location}>
                 <Route path="/" element={<CommonInner background={background}/>}>
