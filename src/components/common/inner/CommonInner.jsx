@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react";
 import { useLocation, useOutlet } from "react-router-dom";
-import { getLenis } from "@/utils";
+// import { getLenis } from "@/utils";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // componets
 import { CommonHeader, CommonFooter, CommonLoader, CommonTransition } from '@/components/common';
-
-if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-}
 
 // gsap
 gsap.registerPlugin(ScrollTrigger);
@@ -46,10 +42,10 @@ export const CommonInner = () => {
         
         //getLenis();
         
-        // const lenis = getLenis();
-        // window.history.scrollRestoration = 'manual';
-        // window.scrollTo(0, 0);
-        // lenis.scrollTo(0, { immediate: true, duration: 0 });
+        //const lenis = getLenis();
+        //window.history.scrollRestoration = 'manual';
+        //window.scrollTo(0, 0);
+        //lenis.scrollTo(0, { immediate: true, duration: 0 });
         
         requestAnimationFrame(() => {
             ScrollTrigger.refresh();
