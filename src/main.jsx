@@ -4,8 +4,8 @@ import { BrowserRouter } from 'react-router-dom'
 
 import App from './App.jsx'
 
-if ('scrollRestoration' in window.history) {
-    window.history.scrollRestoration = 'manual';
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
 }
 
 createRoot(document.getElementById('root')).render(

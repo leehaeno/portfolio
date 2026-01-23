@@ -20,6 +20,10 @@ export default function (){
                 window.scrollTo(0, 0);
             }
         };
+        
+        window.onbeforeunload = function pushRefresh() {
+            window.scrollTo(0, 0);
+        };
 
         window.addEventListener('pageshow', forceTop);
 
