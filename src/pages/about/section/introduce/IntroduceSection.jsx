@@ -40,8 +40,8 @@ const IntroduceSection = () => {
                 }
             });
 
-            introduceIcon.set(q(`.${styles.title__tit} .${styles.icon1} img`) ,{ opacity: 1, yPercent:-60 })
-            .set(q(`.${styles.title__tit} .${styles.icon2} img`) ,{ opacity: 1, yPercent:-40 });
+            introduceIcon.set(q(`.${styles.title__tit} .${styles.icon1} img`) ,{ opacity: 0, yPercent:-60 })
+            .set(q(`.${styles.title__tit} .${styles.icon2} img`) ,{ opacity: 0, yPercent:-40 });
 
             introduceIcon.to(q(`.${styles.title__tit} .${styles.icon1} img`) ,{ opacity: 1, yPercent:0 })
             .to(q(`.${styles.title__tit} .${styles.icon2} img`) ,{ opacity: 1, yPercent:0 });
@@ -139,8 +139,8 @@ const IntroduceSection = () => {
                 }
             });
 
-            introduceIcon.set(q(`.${styles.title__tit} .${styles.icon1} img`) ,{ opacity: 1, yPercent:-60 },)
-            .set(q(`.${styles.title__tit} .${styles.icon2} img`) ,{ opacity: 1, yPercent:-40 },);
+            introduceIcon.set(q(`.${styles.title__tit} .${styles.icon1} img`) ,{ opacity: 0, yPercent:-60 },)
+            .set(q(`.${styles.title__tit} .${styles.icon2} img`) ,{ opacity: 0, yPercent:-40 },);
 
             introduceIcon.to(q(`.${styles.title__tit} .${styles.icon1} img`) ,{ opacity: 1, yPercent:0 },)
             .to(q(`.${styles.title__tit} .${styles.icon2} img`) ,{ opacity: 1, yPercent:0 },);
