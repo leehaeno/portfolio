@@ -15,6 +15,10 @@ import{ Modal } from "@/components/ui";
 // style
 import './assets/scss/style.scss';
 
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
 function App() {
     const location = useLocation();
     const background = location.state && location.state.backgroundLocation;
@@ -32,7 +36,7 @@ function App() {
     <>
         <ScrollToTop />
         <CommonSkip />
-        <AnimatePresence mode="wait" initial={true} onExitComplete={() => window.scrollTo(0, 0)}>
+        <AnimatePresence mode="wait" initial={true} onExitComplete={() => {window.scrollTo(0, 0);}}>
             <Routes key={basePath} location={background || location}>
                 <Route path="/" element={<CommonInner background={background}/>}>
                     <Route index element={<Home />} />
