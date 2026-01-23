@@ -18,9 +18,10 @@ const IntroduceSection = () => {
         mm.add("(min-width: 1024px)", () => {
             
             //// introduce title - title
+            gsap.set(q(`.${styles.title__tit} p`), {opacity: 0, yPercent: -80});
             gsap.to(q(`.${styles.title__tit} p`), {
                 opacity:1,
-                y:0,
+                yPercent:0,
                 scrollTrigger: {
                     trigger: q(`.${styles.title}`),
                     start: "top 80%",
@@ -28,8 +29,8 @@ const IntroduceSection = () => {
                     scrub: true,
                 },
             });
-
-             //// introduce title - icon
+            
+            //// introduce title - icon
             const introduceIcon = gsap.timeline({
                 scrollTrigger: {
                     trigger: q(`.${styles.title}`),
@@ -39,8 +40,11 @@ const IntroduceSection = () => {
                 }
             });
 
-            introduceIcon.to(q(`.${styles.title__tit} .${styles.icon1} img`) ,{ opacity: 1, y:0 })
-            .to(q(`.${styles.title__tit} .${styles.icon2} img`) ,{ opacity: 1, y:0 });
+            introduceIcon.set(q(`.${styles.title__tit} .${styles.icon1} img`) ,{ opacity: 1, yPercent:-60 })
+            .set(q(`.${styles.title__tit} .${styles.icon2} img`) ,{ opacity: 1, yPercent:-40 });
+
+            introduceIcon.to(q(`.${styles.title__tit} .${styles.icon1} img`) ,{ opacity: 1, yPercent:0 })
+            .to(q(`.${styles.title__tit} .${styles.icon2} img`) ,{ opacity: 1, yPercent:0 });
 
             //// introduce title - list
             const introduceSticky = gsap.timeline({
@@ -83,18 +87,14 @@ const IntroduceSection = () => {
             introduceSticky.to(q(`.${styles.list} li:nth-child(4) .${styles.img}`), { opacity: 1, width: "13rem", duration:"1"  },"<");
 
             //// introduce text - txt
-            gsap.fromTo(q(`.${styles.introduce__text} .${styles.txt} span`),
-                {backgroundPositionX: "100%"},{
+            gsap.set(q(`.${styles.introduce__text} .${styles.txt} span`), {backgroundPositionX: "100%"});
+            gsap.to(q(`.${styles.introduce__text} .${styles.txt} span`),{
                     backgroundPositionX: "0%",
                     scrollTrigger: {
                         trigger: q(`.${styles.introduce__text}`),
                         start: "top top+=10%",
                         end: "bottom bottom",
                         scrub: 1.5,
-                        invalidateOnRefresh: true,
-                        onRefresh: () => {
-                            gsap.set(q(`.${styles.introduce__text} .${styles.txt} span`), { backgroundPositionX: "100%" });
-                        },
                     },
                 }
             );
@@ -117,9 +117,10 @@ const IntroduceSection = () => {
         mm.add("(max-width: 1023px)", () => {
 
             //// introduce title - title
+            gsap.set(q(`.${styles.title__tit} p`), {opacity: 0, yPercent: -100});
             gsap.to(q(`.${styles.title__tit} p`), {
                 opacity:1,
-                y:0,
+                yPercent:0,
                 scrollTrigger: {
                     trigger: q(`.${styles.title}`),
                     start: "top 80%",
@@ -138,8 +139,11 @@ const IntroduceSection = () => {
                 }
             });
 
-            introduceIcon.to(q(`.${styles.title__tit} .${styles.icon1} img`) ,{ opacity: 1, y:0 },">")
-            .to(q(`.${styles.title__tit} .${styles.icon2} img`) ,{ opacity: 1, y:0 },">");
+            introduceIcon.set(q(`.${styles.title__tit} .${styles.icon1} img`) ,{ opacity: 1, yPercent:-60 },)
+            .set(q(`.${styles.title__tit} .${styles.icon2} img`) ,{ opacity: 1, yPercent:-40 },);
+
+            introduceIcon.to(q(`.${styles.title__tit} .${styles.icon1} img`) ,{ opacity: 1, yPercent:0 },)
+            .to(q(`.${styles.title__tit} .${styles.icon2} img`) ,{ opacity: 1, yPercent:0 },);
 
             //// introduce title - list
             const introduceTitle = gsap.timeline({
@@ -170,6 +174,7 @@ const IntroduceSection = () => {
             });
 
             //// introduce text - txt
+            gsap.set(q(`.${styles.introduce__text} .${styles.txt} span`), {backgroundPositionX: "100%"});
             gsap.to(q(`.${styles.introduce__text} .${styles.txt} span`), {
                 backgroundPositionX: 0,
                 duration: 2,
