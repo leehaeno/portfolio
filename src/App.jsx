@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { Route, Routes, useLocation  } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import ScrollToTop from "./utils/scrolltop.js";
+import { getLenis } from "@/utils";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // page
 import Home from '@/pages/home/Home';
@@ -19,6 +23,9 @@ if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
 
+// gsap
+gsap.registerPlugin(ScrollTrigger);
+
 function App() {
     const location = useLocation();
     const background = location.state && location.state.backgroundLocation;
@@ -32,9 +39,22 @@ function App() {
         basePath = location.pathname;
     }
 
+    useEffect(() => { 
+        //getLenis();
+        
+        const lenis = getLenis();
+        //window.history.scrollRestoration = 'manual';
+        //window.scrollTo(0, 0);
+        lenis.scrollTo(0, { immediate: true, duration: 0 });
+        
+        requestAnimationFrame(() => {
+            ScrollTrigger.refresh();
+        });
+    },[])
+
     return (
     <>
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
         <CommonSkip />
         <AnimatePresence mode="wait" initial={true} onExitComplete={() => {window.scrollTo(0, 0);}}>
             <Routes key={basePath} location={background || location}>

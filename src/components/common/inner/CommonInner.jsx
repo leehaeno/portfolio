@@ -7,8 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // componets
 import { CommonHeader, CommonFooter, CommonLoader, CommonTransition } from '@/components/common';
 
-// gsap
-gsap.registerPlugin(ScrollTrigger);
+// // gsap
+// gsap.registerPlugin(ScrollTrigger);
 
 const routes = {
     "/": "index",
@@ -38,19 +38,7 @@ export const CommonInner = () => {
         className = `${pathName}`;
     }
 
-    useEffect(() => { 
-        
-        //getLenis();
-        
-        //const lenis = getLenis();
-        //window.history.scrollRestoration = 'manual';
-        //window.scrollTo(0, 0);
-        //lenis.scrollTo(0, { immediate: true, duration: 0 });
-        
-        requestAnimationFrame(() => {
-            ScrollTrigger.refresh();
-        });
-    },[])
+    
 
     return (
         <div id="wrap" className={className} >
