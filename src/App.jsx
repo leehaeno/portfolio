@@ -28,6 +28,10 @@ function App() {
         basePath = location.pathname;
     }
 
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
     return (
     <>
         <ScrollToTop />
