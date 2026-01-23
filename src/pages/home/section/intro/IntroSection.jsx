@@ -264,10 +264,6 @@ const IntroSection = () => {
             });
         });
 
-        requestAnimationFrame(() => {
-            ScrollTrigger.refresh();
-        });
-
         return () => {
             mm.revert();
             ScrollTrigger.getAll().forEach(t => t.kill());
