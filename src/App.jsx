@@ -15,10 +15,6 @@ import{ Modal } from "@/components/ui";
 // style
 import './assets/scss/style.scss';
 
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}
-
 function App() {
     const location = useLocation();
     const background = location.state && location.state.backgroundLocation;

@@ -11,14 +11,18 @@ export default function (){
         // requestAnimationFrame(() => {
         //     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
         // });
-        const forceTop = () => {
-            const lenis = getLenis();
+        const lenis = getLenis();
 
+        const forceTop = () => {
             if (lenis) {
                 lenis.scrollTo(0, { immediate: true });
             } else {
                 window.scrollTo(0, 0);
             }
+        };
+        
+        window.onbeforeunload = function pushRefresh() {
+            window.scrollTo(0, 0);
         };
 
         window.addEventListener('pageshow', forceTop);
