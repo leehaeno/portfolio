@@ -98,7 +98,7 @@ const Contact = () => {
                         <div className={styles.right}>
                             <ul>
                                 <li><a href="mailto:abcd1e34@gmail.com">Email</a></li>
-                                <li><a href="javascript:void(0)" onClick={handleDownload}>Resume</a></li>
+                                <li><a onClick={handleDownload}>Resume</a></li>
                             </ul>
                         </div>
                     </div>

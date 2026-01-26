@@ -71,7 +71,7 @@
                         will-change: transform, opacity;
 
                         @include mx.md{
-                            transform: translateY(-100%);
+                            //transform: translateY(-100%);
                         }
 
                         span{

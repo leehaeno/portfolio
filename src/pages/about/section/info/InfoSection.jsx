@@ -12,7 +12,7 @@ const InfoSection = () => {
     const infoSectionRef = useRef(null);
     const q = gsap.utils.selector(infoSectionRef);
 
-     const handleDownload = () => {
+    const handleDownload = () => {
         const link = document.createElement('a');
         link.href = '/resume.pdf';
         link.download = 'resume.pdf';
