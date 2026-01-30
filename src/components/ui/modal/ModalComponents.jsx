@@ -174,7 +174,7 @@ const Modal = () => {
                                         <dl className={styles.item4}>
                                             <dt>링크</dt>
                                             <dd>
-                                                <p>정책에 따라 일부만 공개되는 점 <br />양해 부탁드립니다.</p>
+                                                <p>일부만 공개되는 점 <br />양해 부탁드립니다.</p>
                                             </dd>
                                         </dl>
                                     )}
