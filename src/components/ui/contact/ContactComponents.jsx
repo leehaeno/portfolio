@@ -290,6 +290,7 @@ const Contact = () => {
                     <div className={styles.box__copy}>
                         <div className={styles.copyright}>
                             <p>Copyright 2026. leehyunho all rights reserved.</p>
+                            <p>본 포트폴리오 취업을 위한 비상업적 용도로 제작되었습니다.</p>
                         </div>
                     </div>
                 </div>
