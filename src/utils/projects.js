@@ -59,6 +59,12 @@ export const projectList = [
         date: "2024.02",
         contrib: "100%",
         tech: [ "HTML", "CSS", "JavaScript" ],
+        link: [
+            {
+                pc: "https://lehyho.dothome.co.kr/fasttrack/",
+                mobile: "https://lehyho.dothome.co.kr/fasttrack/m"
+            },
+        ],
         description: [
             "GNB와 Aside 메뉴에 섹션 기반 활성화 기능을 적용해, 사용자가 어느 위치에 있든 직관적으로 현재 섹션을 확인할 수 있도록 구현했으며, Aside는 배경과 겹치지 않도록 대비 색상으로 자동 전환되게 작업했습니다.",
             "리뷰 클릭 시 나오는 팝업에 해당 내용과 이미지를 fetch로 로드하여 유지보수가 쉬운 구조로 구현했습니다.",
