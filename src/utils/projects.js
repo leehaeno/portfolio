@@ -346,7 +346,7 @@ export const projectList = [
     },
     {   
         id: "portfolio",
-        title: "포토폴리오" ,
+        title: "포트폴리오" ,
         category: "project",
         type: [ "반응형"],
         date: "2025.09",
